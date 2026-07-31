@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Gassy Boy ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ffd6e8,#ffeab8);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+
+}
+
+.card{
+
+width:min(90%,420px);
+background:white;
+border-radius:25px;
+padding:30px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+color:#ff4d6d;
+margin-bottom:15px;
+
+}
+
+p{
+
+font-size:18px;
+margin-top:20px;
+color:#555;
+
+}
+
+.scene{
+
+position:relative;
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+/* Head */
+
+.head{
+
+width:120px;
+height:120px;
+background:#ffd8b0;
+border-radius:50%;
+position:relative;
+animation:nod 3s infinite;
+
+}
+
+@keyframes nod{
+
+0%,100%{transform:rotate(0deg);}
+50%{transform:rotate(4deg);}
+
+}
+
+/* Eyes */
+
+.eye{
+
+position:absolute;
+width:18px;
+height:6px;
+background:#222;
+border-radius:50px;
+top:48px;
+
+}
+
+.left{
+
+left:28px;
+
+}
+
+.right{
+
+right:28px;
+
+}
+
+/* Eyebrows */
+
+.eye::before{
+
+content:'';
+position:absolute;
+width:20px;
+height:3px;
+background:#222;
+top:-8px;
+left:-1px;
+transform:rotate(-10deg);
+
+}
+
+/* Mouth */
+
+.mouth{
+
+position:absolute;
+width:40px;
+height:18px;
+border:3px solid #333;
+border-top:none;
+border-left:none;
+border-right:none;
+bottom:30px;
+left:40px;
+border-radius:50%;
+animation:sad 2s infinite;
+
+}
+
+@keyframes sad{
+
+50%{
+
+transform:translateY(2px);
+
+}
+
+}
+
+/* Body */
+
+.body{
+
+position:absolute;
+top:105px;
+left:50%;
+transform:translateX(-50%);
+width:130px;
+height:150px;
+background:#7bc8ff;
+border-radius:50px;
+animation:bloat 2.2s infinite;
+
+}
+
+@keyframes bloat{
+
+0%,100%{
+
+transform:translateX(-50%) scale(1);
+
+}
+
+50%{
+
+transform:translateX(-50%) scale(1.08);
+
+}
+
+}
+
+/* Arms */
+
+.arm{
+
+position:absolute;
+width:25px;
+height:90px;
+background:#ffd8b0;
+border-radius:20px;
+
+}
+
+.arm.left{
+
+left:-15px;
+top:20px;
+transform:rotate(25deg);
+
+}
+
+.arm.right{
+
+right:-15px;
+top:20px;
+transform:rotate(-25deg);
+
+}
+
+/* Belly */
+
+.belly{
+
+position:absolute;
+width:70px;
+height:70px;
+background:rgba(255,255,255,.35);
+border-radius:50%;
+top:50px;
+left:30px;
+
+}
+
+/* Legs */
+
+.leg{
+
+position:absolute;
+width:25px;
+height:70px;
+background:#333;
+bottom:-60px;
+border-radius:20px;
+
+}
+
+.leg.left{
+
+left:30px;
+
+}
+
+.leg.right{
+
+right:30px;
+
+}
+
+/* Gas Clouds */
+
+.gas{
+
+position:absolute;
+font-size:34px;
+animation:float 4s infinite;
+opacity:.7;
+
+}
+
+.g1{
+
+left:30px;
+bottom:20px;
+animation-delay:0s;
+
+}
+
+.g2{
+
+right:40px;
+bottom:40px;
+animation-delay:1.5s;
+
+}
+
+.g3{
+
+left:100px;
+bottom:10px;
+animation-delay:3s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0) scale(.8);
+opacity:0;
+
+}
+
+30%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-130px) scale(1.4);
+opacity:0;
+
+}
+
+}
+
+.heart{
+
+font-size:28px;
+animation:heartbeat 1s infinite;
+
+}
+
+@keyframes heartbeat{
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+}
+
+button{
+
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:50px;
+background:#ff4d6d;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+#message{
+
+margin-top:15px;
+font-weight:bold;
+color:#ff4d6d;
+min-height:30px;
+
+}
+
+@media(max-width:500px){
+
+.card{
+
+padding:20px;
+
+}
+
+.scene{
+
+transform:scale(.9);
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<h1>My Poor Gassy Boy 🥺</h1>
+
+<div class="scene">
+
+<div class="gas g1">💨</div>
+<div class="gas g2">💨</div>
+<div class="gas g3">💨</div>
+
+<div class="head">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+<div class="mouth"></div>
+
+<div class="body">
+
+<div class="arm left"></div>
+<div class="arm right"></div>
+
+<div class="belly"></div>
+
+<div class="leg left"></div>
+<div class="leg right"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<p>
+Your tummy is fighting battles today... 😭<br><br>
+I hereby diagnose you with
+<b>Maximum Cutie Patootie Gas Syndrome™</b>.
+</p>
+
+<div class="heart">❤️</div>
+
+<button onclick="healBoy()">
+Give Belly Rub 🫳
+</button>
+
+<div id="message"></div>
+
+</div>
+
+<script>
+
+const msgs=[
+
+"🥹 Awww... he smiled a little!",
+"💚 +10 Healing Points!",
+"🍵 Sending warm cuddles...",
+"🥺 Tummy says thank you.",
+"💨 One gas escaped successfully.",
+"❤️ You're the cutest patient ever.",
+"😂 Emergency cuddle required!"
+];
+
+function healBoy(){
+
+const m=document.getElementById("message");
+
+m.innerHTML=msgs[Math.floor(Math.random()*msgs.length)];
+
+}
+
+</script>
+
+</body>
+</html>
